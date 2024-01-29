@@ -1,0 +1,14 @@
+/* https://www.javadoc.io/doc/org.openjfx/javafx-controls/18/javafx.graphics/javafx/scene/doc-files/cssref.html */
+VBox {
+  	-fx-border-width: 1em; 
+  	-fx-border-color: #0000;
+  	-fx-spacing: 0.5em;
+}
+
+.mainStage Button {
+    -fx-min-width: 25em;   
+}
+
+.mnemonic-underline {
+    -fx-stroke: -fx-text-base-color;
+}

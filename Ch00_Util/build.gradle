@@ -1,0 +1,24 @@
+plugins {
+    id 'java-library'
+    id 'org.jetbrains.kotlin.jvm' version '1.7.10'
+	id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
+
+compileKotlin {
+	kotlinOptions {
+		suppressWarnings = true
+		jvmTarget = "17"
+	}
+} 
+
+javafx {
+	version = "19"
+	modules("javafx.controls", "javafx.graphics")
+}

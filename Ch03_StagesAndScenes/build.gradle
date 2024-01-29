@@ -1,0 +1,39 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.7.10'
+    id 'application'
+	id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+  implementation project(':Ch00_Util')
+}
+
+application {
+    mainClass = 'book.kotlinfx.ch03.AppKt'
+}
+
+// Start the application with parameters
+// See App.kt to see how to get them (init() method)
+task startWithParameters(type: JavaExec, dependsOn: [build]) {
+    group 'application'
+    description 'Start with parameters'
+    main = "book.kotlinfx.ch03.AppKt"
+    classpath = sourceSets.main.runtimeClasspath
+    args = ['par1','par2','--par3=11','--par4=42']
+}
+
+compileKotlin {
+	kotlinOptions {
+		suppressWarnings = true
+		jvmTarget = "17"
+	}
+} 
+
+javafx {
+	version = "19"
+	modules("javafx.controls", "javafx.fxml", "javafx.graphics", "javafx.swing")
+}

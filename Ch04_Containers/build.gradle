@@ -1,0 +1,37 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.7.10'
+    id 'application'
+	id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+  implementation project(':Ch00_Util')
+}
+
+application {
+    mainClass = 'book.kotlinfx.ch04.AppKt'
+    // applicationDefaultJvmArgs = ["--add-opens java.base/jdk.internal.loader=ALL-UNNAMED"]
+}
+
+compileKotlin {
+	kotlinOptions {
+		suppressWarnings = true
+		jvmTarget = "17"
+	}
+} 
+
+javafx {
+	version = "19"
+	modules("javafx.controls", "javafx.fxml", "javafx.graphics", "javafx.swing")
+}
+
+
+/*tasks.named('compileKotlin', KotlinCompilationTask.class) {
+    compilerOptions {
+        freeCompilerArgs.add("--add-exports=java.desktop/java.awt.peer=ALL-UNNAMED")
+    }
+}*/		 

@@ -1,0 +1,25 @@
+/* https://www.javadoc.io/doc/org.openjfx/javafx-controls/18/javafx.graphics/javafx/scene/doc-files/cssref.html */
+#contents {
+  /* artificial margin ---------- */
+  -fx-padding: 1em;
+  -fx-border-insets: 1em;
+  -fx-background-insets: 1em;
+  /* END artificial margin ------ */
+}
+
+#tf3 {
+   -fx-pref-column-count: 24;
+}
+
+#ta3 {
+   -fx-pref-column-count: 24;
+   -fx-pref-row-count: 3;
+}
+
+#btnBox Button {
+    -fx-min-width: 25em;
+}
+
+.dialog-contents {
+  -fx-padding: 1em;
+}
